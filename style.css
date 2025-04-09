@@ -1,0 +1,347 @@
+/* Importando fontes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+/* ===== RESET GERAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* ===== CORES PADRÃO ===== */
+:root {
+    --gradiente: linear-gradient(90deg, #0f2027, #2c5364);
+    --verde: #00ff88;
+    --azul: #0057ff;
+    --text-claro: #f0f0f0;
+    --bg-dark: #121212;
+}
+
+/* ===== BODY COM GALÁXIA ===== */
+body {
+    background: #000;
+    color: var(--text-claro);
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    position: relative;
+    z-index: 0;
+    overflow-x: hidden;
+}
+
+/* Camada de partículas */
+#tsparticles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Gradiente animado por trás da galáxia */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(-45deg, #0f2027, #2c5364, #1a1a2e, #000428);
+    background-size: 400% 400%;
+    animation: gradientBG 30s ease infinite;
+    opacity: 0.1;
+    z-index: -2;
+}
+
+/* Animação do gradiente */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ===== CONTAINER GERAL ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: var(--gradiente);
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    width: 60px;
+}
+
+.menu ul {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: var(--verde);
+}
+
+.btn-contato button {
+    background: var(--verde);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-contato button:hover {
+    background: #00cc6a;
+}
+
+/* ===== HERO ===== */
+.hero {
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero span {
+    color: var(--verde);
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.hero .btn {
+    background: var(--verde);
+    color: black;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero .btn:hover {
+    background: #00cc6a;
+}
+
+/* ===== ESPECIALIDADES ===== */
+.especialidades {
+    background: #1b1b1b;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.especialidades h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.especialidades span {
+    color: var(--verde);
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.box {
+    background: var(--gradiente);
+    border-radius: 20px;
+    padding: 30px;
+    width: 250px;
+    color: white;
+    box-shadow: 0 0 15px #00000080;
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+}
+
+.box i {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* ===== SERVIÇOS ===== */
+.servicos {
+    background: #101010;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.servicos h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.servicos span {
+    color: var(--azul);
+}
+
+.card {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 30px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 0 10px #00000050;
+}
+
+.card h3 {
+    color: var(--verde);
+    margin-bottom: 20px;
+}
+
+.card ul {
+    list-style: disc;
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+/* ===== CONTATO ===== */
+.fale-comigo {
+    background: var(--gradiente);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.fale-comigo h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.fale-comigo span {
+    color: var(--verde);
+}
+
+.fale-comigo form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.fale-comigo input,
+.fale-comigo textarea {
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    resize: none;
+}
+
+.fale-comigo button {
+    background: var(--verde);
+    border: none;
+    padding: 15px;
+    border-radius: 30px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.fale-comigo button:hover {
+    background: #00cc6a;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+    background: #0c0c0c;
+    color: #ccc;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer .redes-sociais {
+    margin-top: 15px;
+}
+
+footer .redes-sociais a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer .redes-sociais a:hover {
+    color: var(--verde);
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .container,
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .btn-contato {
+        margin-top: 10px;
+    }
+}
+
+section {
+    scroll-margin-top: 100px; /* altura do header + um espaçozinho */
+}
