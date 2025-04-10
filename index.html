@@ -103,20 +103,17 @@
         <div class="container">
             <h2><span>Fale</span> Comigo</h2>
             <p>Quer tirar dúvidas, conversar ou fechar um projeto? Estou à disposição!</p>
-          <form action="https://formsubmit.co/davimiranda433@gmail.com" method="POST">
-  <input type="text" name="nome" required>
-  <input type="email" name="email" required>
-  <textarea name="mensagem" required></textarea>
-  
-  <input type="hidden" name="_next" value="https://davimirandajr.github.io/Portfolio/#">
-  
+            <form action="https://formsubmit.co/davimiranda433@gmail.com" method="POST">
+                <input type="text" name="nome" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <textarea name="mensagem" placeholder="Digite sua mensagem..." required></textarea>
+                
+                <!-- Redirecionamento personalizado -->
+                <input type="hidden" name="_next" value="https://davimirandajr.github.io/Portfolio/agradecimento.html">
+                <input type="hidden" name="_captcha" value="false">
 
-  <input type="hidden" name="_captcha" value="false">
-
-  <button type="submit">Enviar</button>
-</form>
-
-            
+                <button type="submit">Enviar</button>
+            </form>
         </div>
     </section>
 
@@ -125,19 +122,19 @@
         <div class="container">
             <p>&copy; 2025 Davi Miranda. Todos os direitos reservados.</p>
             <div class="redes-sociais">
-    <a href="https://www.instagram.com/davijunior.eng/" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-instagram"></i>
-    </a>
-    <a href="https://davimirandajr.github.io/Portfolio/#" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-github"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/davi-gomes-7a4a0b186/" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-linkedin"></i>
-    </a>
-</div>
-
+                <a href="https://www.instagram.com/davijunior.eng/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="https://davimirandajr.github.io/Portfolio/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/davi-gomes-7a4a0b186/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </div>
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
     <script>
         tsParticles.load("tsparticles", {
