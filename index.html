@@ -6,7 +6,6 @@
     <title>Portfólio - Davi Miranda</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
 </head>
 <body>
     <div id="tsparticles"></div>
@@ -27,8 +26,8 @@
                 </ul>
             </nav>
             <div class="btn-contato">
-                <a href="#"><button>Contato</button></a>
-            </div>
+                <a href="#"><button>Contato</button></a>    
+            </div>  
         </div>
     </header>
 
@@ -104,12 +103,13 @@
         <div class="container">
             <h2><span>Fale</span> Comigo</h2>
             <p>Quer tirar dúvidas, conversar ou fechar um projeto? Estou à disposição!</p>
-            <form>
-                <input type="text" placeholder="Seu nome" required>
-                <input type="email" placeholder="Seu e-mail" required>
-                <textarea placeholder="Digite sua mensagem..." required></textarea>
+            <form action="processa_form.php" method="POST">
+                <input type="text" name="nome" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <textarea name="mensagem" placeholder="Digite sua mensagem..." required></textarea>
                 <button type="submit">Enviar Mensagem</button>
             </form>
+            
         </div>
     </section>
 
@@ -163,7 +163,7 @@
         });
     </script>  
     <script> window.chtlConfig = { chatbotId: "4885646628" } </script>
-<script async data-id="4885646628" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+    <script async data-id="4885646628" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
 
 </body>
 </html>
