@@ -103,29 +103,37 @@
         <div class="container">
             <h2><span>Fale</span> Comigo</h2>
             <p>Quer tirar dúvidas, conversar ou fechar um projeto? Estou à disposição!</p>
-
-            <!-- Formulário de contato com action para formsubmit -->
-            <form action="https://formsubmit.co/el/fejizo" method="POST">
+            
+            <!-- Formulário de Contato -->
+            <form action="https://formsubmit.co/el/fejizo" method="POST" id="form-contato">
                 <input type="text" name="nome" placeholder="Seu nome" required>
                 <input type="email" name="email" placeholder="Seu e-mail" required>
                 <textarea name="mensagem" placeholder="Digite sua mensagem..." required></textarea>
-                
-                <!-- Campo oculto para evitar spams -->
                 <input type="text" name="_honey" style="display:none">
-
-                <!-- Desativa CAPTCHA -->
                 <input type="hidden" name="_captcha" value="false">
                 <button type="submit">Enviar</button>
             </form>
 
-            <!-- Mensagem de sucesso -->
+            <!-- Mensagem de Sucesso -->
             <div id="mensagem-sucesso" style="display: none;">
                 <p>Mensagem enviada com sucesso!</p>
             </div>
 
-            <!-- Mensagem de erro -->
-            <div id="mensagem-erro" style="display: none;">
-                <p>Ocorreu um erro ao enviar a mensagem. Tente novamente.</p>
+            <!-- Instruções sobre o Formulário -->
+            <div class="instrucoes">
+                <h3>Instruções para configurar seu e-mail:</h3>
+                <ol>
+                    <li><strong>Digite seu endereço de e-mail</strong><br>
+                        Você pode usar o formulário acima para obter seu próprio link de e-mail personalizado. Basta digitar seu endereço de e-mail e clicar no botão de criar.
+                    </li>
+                    <li><strong>Clique no link de ativação</strong><br>
+                        Após enviar o formulário, você receberá um e-mail com seu link de e-mail e link de ativação. Clique no link de ativação para ativar seu link de e-mail.
+                    </li>
+                    <li><strong>Adicione-o ao seu site</strong><br>
+                        Em seguida, você pode adicionar o link de e-mail ao seu site em vez de expor seu endereço de e-mail ou também pode compartilhá-lo nas redes sociais. Você receberá todas as mensagens na sua caixa de entrada de forma segura e gratuita.
+                    </li>
+                </ol>
+                <a href="https://formsubmit.co/el/{custom-link}" target="_blank">Envie-nos um e-mail</a>
             </div>
 
         </div>
