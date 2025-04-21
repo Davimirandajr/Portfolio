@@ -117,6 +117,31 @@
             <div id="mensagem-sucesso" style="display: none;">
                 <p>Mensagem enviada com sucesso!</p>
             </div>
+<script>
+    document.getElementById('form-contato').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const form = e.target;
+        const formData = new FormData(form);
+
+        fetch("https://formsubmit.co/el/fejizo", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                form.reset();
+                document.getElementById("mensagem-sucesso").style.display = "block";
+            } else {
+                alert("⚠️ Erro ao enviar. Tente novamente.");
+            }
+        })
+        .catch(error => {
+            console.error("Erro ao enviar:", error);
+            alert("❌ Ocorreu um erro ao enviar. Verifique sua conexão ou tente mais tarde.");
+        });
+    });
+</script>
 
           
 
