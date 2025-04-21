@@ -109,7 +109,11 @@
                 <input type="text" name="nome" placeholder="Seu nome" required>
                 <input type="email" name="email" placeholder="Seu e-mail" required>
                 <textarea name="mensagem" placeholder="Digite sua mensagem..." required></textarea>
+                
+                <!-- Campo oculto para evitar spams -->
                 <input type="text" name="_honey" style="display:none">
+
+                <!-- Desativa CAPTCHA -->
                 <input type="hidden" name="_captcha" value="false">
                 <button type="submit">Enviar</button>
             </form>
