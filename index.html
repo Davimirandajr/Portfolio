@@ -103,7 +103,9 @@
         <div class="container">
             <h2><span>Fale</span> Comigo</h2>
             <p>Quer tirar dúvidas, conversar ou fechar um projeto? Estou à disposição!</p>
-            <form id="form-contato">
+
+            <!-- Formulário de contato com action para formsubmit -->
+            <form action="https://formsubmit.co/el/fejizo" method="POST">
                 <input type="text" name="nome" placeholder="Seu nome" required>
                 <input type="email" name="email" placeholder="Seu e-mail" required>
                 <textarea name="mensagem" placeholder="Digite sua mensagem..." required></textarea>
@@ -112,13 +114,16 @@
                 <button type="submit">Enviar</button>
             </form>
 
+            <!-- Mensagem de sucesso -->
             <div id="mensagem-sucesso" style="display: none;">
                 <p>Mensagem enviada com sucesso!</p>
             </div>
 
+            <!-- Mensagem de erro -->
             <div id="mensagem-erro" style="display: none;">
                 <p>Ocorreu um erro ao enviar a mensagem. Tente novamente.</p>
             </div>
+
         </div>
     </section>
 
@@ -176,32 +181,6 @@
             background: {
                 color: "#000000"
             }
-        });
-
-        // Adicionando o envio do formulário via JavaScript
-        document.getElementById("form-contato").addEventListener("submit", function(e) {
-            e.preventDefault();  // Impede o comportamento padrão do formulário
-
-            // Obtém os dados do formulário
-            const formData = new FormData(this);
-
-            // Envia a requisição
-            fetch('https://formsubmit.co/el/fejizo', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => {
-                if (response.ok) {
-                    document.getElementById('mensagem-sucesso').style.display = 'block';
-                    document.getElementById('form-contato').reset();  // Reseta o formulário
-                } else {
-                    throw new Error('Erro ao enviar a mensagem');
-                }
-            })
-            .catch(error => {
-                console.error(error);
-                document.getElementById('mensagem-erro').style.display = 'block';
-            });
         });
     </script>
 
