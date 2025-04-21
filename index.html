@@ -103,7 +103,7 @@
         <div class="container">
             <h2><span>Fale</span> Comigo</h2>
             <p>Quer tirar dúvidas, conversar ou fechar um projeto? Estou à disposição!</p>
-            <form action="https://formsubmit.co/el/fejizo" method="POST" id="form-contato">
+            <form action="https://formsubmit.co/el/fejizo" method="POST" id="form-contato" target="_blank">
                 <input type="text" name="nome" placeholder="Seu nome" required>
                 <input type="email" name="email" placeholder="Seu e-mail" required>
                 <textarea name="mensagem" placeholder="Digite sua mensagem..." required></textarea>
@@ -119,30 +119,6 @@
             <div id="mensagem-erro" style="display: none;">
                 <p>Ocorreu um erro ao enviar a mensagem. Tente novamente.</p>
             </div>
-
-            <script>
-                document.getElementById('form-contato').addEventListener('submit', function(e) {
-                    e.preventDefault();  // Impede o comportamento padrão do formulário
-
-                    fetch('https://formsubmit.co/el/fejizo', {
-                        method: 'POST',
-                        body: new FormData(this),
-                    })
-                    .then(response => {
-                        if (response.ok) {
-                            // Exibe mensagem de sucesso
-                            document.getElementById('mensagem-sucesso').style.display = 'block';
-                            document.getElementById('form-contato').reset();  // Limpa o formulário
-                        } else {
-                            document.getElementById('mensagem-erro').style.display = 'block';
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Erro ao enviar o formulário', error);
-                        document.getElementById('mensagem-erro').style.display = 'block';
-                    });
-                });
-            </script>
         </div>
     </section>
 
