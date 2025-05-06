@@ -345,3 +345,60 @@ footer .redes-sociais a:hover {
 section {
     scroll-margin-top: 100px; /* altura do header + um espaçozinho */
 }
+.projetos {
+    padding: 60px 20px;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+}
+
+.projetos h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.projetos .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card-projeto {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-projeto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 15px rgba(255,255,255,0.1);
+}
+
+.card-projeto h3 {
+    color: #e91e63;
+    margin-bottom: 10px;
+}
+
+.card-projeto p {
+    font-size: 0.95em;
+    margin-bottom: 15px;
+}
+
+.card-projeto a {
+    display: inline-block;
+    background-color: #e91e63;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.card-projeto a:hover {
+    background-color: #c2185b;
+}
+
