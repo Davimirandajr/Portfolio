@@ -1,7 +1,7 @@
-/* Importando fontes */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
-/* ===== RESET GERAL ===== */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@
     scroll-behavior: smooth;
 }
 
-/* ===== CORES PADRÃO ===== */
+
 :root {
     --gradiente: linear-gradient(90deg, #0f2027, #2c5364);
     --verde: #00ff88;
@@ -20,7 +20,7 @@
     --bg-dark: #121212;
 }
 
-/* ===== BODY COM GALÁXIA ===== */
+
 body {
     background: #000;
     color: var(--text-claro);
@@ -32,7 +32,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Camada de partículas */
 #tsparticles {
     position: fixed;
     top: 0;
@@ -43,7 +42,6 @@ body {
     pointer-events: none;
 }
 
-/* Gradiente animado por trás da galáxia */
 body::before {
     content: "";
     position: fixed;
@@ -58,7 +56,7 @@ body::before {
     z-index: -2;
 }
 
-/* Animação do gradiente */
+
 @keyframes gradientBG {
     0% {
         background-position: 0% 50%;
@@ -71,14 +69,13 @@ body::before {
     }
 }
 
-/* ===== CONTAINER GERAL ===== */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
 }
 
-/* ===== HEADER ===== */
 header {
     background: var(--gradiente);
     color: white;
@@ -129,7 +126,7 @@ header .container {
     background: #00cc6a;
 }
 
-/* ===== HERO ===== */
+
 .hero {
     color: white;
     text-align: center;
@@ -165,7 +162,7 @@ header .container {
     background: #00cc6a;
 }
 
-/* ===== ESPECIALIDADES ===== */
+
 .especialidades {
     background: #1b1b1b;
     color: white;
@@ -208,7 +205,7 @@ header .container {
     margin-bottom: 15px;
 }
 
-/* ===== SERVIÇOS ===== */
+
 .servicos {
     background: #101010;
     color: white;
@@ -246,7 +243,7 @@ header .container {
     line-height: 1.8;
 }
 
-/* ===== CONTATO ===== */
+
 .fale-comigo {
     background: var(--gradiente);
     color: white;
@@ -297,7 +294,7 @@ header .container {
     background: #00cc6a;
 }
 
-/* ===== RODAPÉ ===== */
+
 footer {
     background: #0c0c0c;
     color: #ccc;
@@ -320,7 +317,7 @@ footer .redes-sociais a:hover {
     color: var(--verde);
 }
 
-/* ===== RESPONSIVO ===== */
+
 @media (max-width: 768px) {
     .menu ul {
         flex-direction: column;
@@ -343,12 +340,11 @@ footer .redes-sociais a:hover {
     }
 }
 
-/* ===== GERAL ===== */
 section {
     scroll-margin-top: 100px;
 }
 
-/* ===== PROJETOS ===== */
+
 .projetos {
     padding: 80px 20px;
     margin-top: 40px;
@@ -416,14 +412,14 @@ section {
     background-color: #00cc6a;
     transform: scale(1.05);
 }
-/* Estilo para o botão do WhatsApp */
+
 .whatsapp-btn {
     margin-top: 20px;
     text-align: center;
 }
 
 .whatsapp-button {
-    background-color: #25d366; /* Cor do WhatsApp */
+    background-color: #25d366; 
     color: white;
     border: none;
     padding: 10px 20px;
@@ -441,5 +437,5 @@ section {
 }
 
 .whatsapp-button:hover {
-    background-color: #128C7E; /* Cor quando passar o mouse */
+    background-color: #128C7E;
 }
