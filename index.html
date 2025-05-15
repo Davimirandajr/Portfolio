@@ -142,16 +142,19 @@
         <div class="container">
             <h2><span>Fale</span> Comigo</h2>
             <p>Quer tirar dúvidas, conversar ou fechar um projeto? Estou à disposição!</p>
-            <form action="https://formsubmit.co/mirandaeng.soft@gmail.com" method="POST" id="form-contato">
-                <input type="text" name="nome" placeholder="Seu nome" required>
-                <input type="email" name="email" placeholder="Seu e-mail" required>
-                <textarea name="mensagem" placeholder="Digite sua mensagem..." required></textarea>
-                <button type="submit">Enviar Mensagem</button>
-                <input type="text" name="_honey" style="display:none">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="davimirandajr.github.io/Portfolio/">
-            </form>
-            
+       <form action="https://formsubmit.co/mirandaeng.soft@gmail.com" method="POST" id="form-contato">
+    <input type="text" name="nome" placeholder="Seu nome" required>
+    <input type="email" name="email" placeholder="Seu e-mail" required>
+    <textarea name="mensagem" placeholder="Digite sua mensagem..." required></textarea>
+    <button type="submit">Enviar Mensagem</button>
+    <input type="text" name="_honey" style="display:none">
+    <input type="hidden" name="_captcha" value="false">
+</form>
+
+<div id="mensagem-sucesso" style="display: none;">
+    <p>Mensagem enviada com sucesso!</p>
+</div>
+
           
             <div class="whatsapp-btn">
                 <a href="https://api.whatsapp.com/send?phone=559884166977" target="_blank">
