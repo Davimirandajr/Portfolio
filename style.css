@@ -338,18 +338,23 @@ section {
     color: var(--verde);
 }
 
+/* Flex container para projetos - layout flexível, sem grade rígida */
 .projetos .flex {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
+    /* alinhamento vertical e horizontal mais natural */
+    align-items: stretch;
 }
 
+/* Cards com flex para ficar flexíveis, com efeito visual */
 .card-projeto {
     background-color: #1a1a1a;
     border-radius: 12px;
     padding: 20px;
-    width: 280px;
+    flex: 1 1 280px;   /* cresce e encolhe com base mínima de 280px */
+    max-width: 320px;  /* limite máximo pra não ficar gigante */
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
@@ -360,7 +365,7 @@ section {
 
 .card-projeto:hover {
     transform: translateY(-8px);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 204, 106, 0.5); /* sombra verde suave */
 }
 
 .card-projeto h3 {
@@ -374,6 +379,7 @@ section {
     font-size: 1em;
     margin-bottom: 15px;
     color: #ccc;
+    flex-grow: 1; /* para os textos ocuparem espaço e os botões ficarem na base */
 }
 
 .card-projeto a {
@@ -390,6 +396,18 @@ section {
 .card-projeto a:hover {
     background-color: #00cc6a;
     transform: scale(1.05);
+}
+
+/* Responsividade simples para telas pequenas */
+@media (max-width: 600px) {
+    .projetos .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-projeto {
+        max-width: 90%;
+    }
 }
 
 /* BOTÃO WHATSAPP */
